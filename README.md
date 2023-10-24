@@ -23,10 +23,13 @@ En respectant ces prérequis, vous serez prêt à déployer et à configurer Cal
 ## Étape 1: Installation de Calico
 
 ### 1.1. Téléchargement du manifeste
+
 ```shell
 wget https://docs.projectcalico.org/manifests/calico.yaml
 ```
+
 ### 1.2. Appliquer le manifeste
+
 ```shell
 kubectl apply -f calico.yaml
 ```
@@ -41,6 +44,7 @@ kubectl get pods -n kube-system
 
 ### 2.1. Personnalisation de la configuration (optionnel)
 Vous pouvez personnaliser la configuration de Calico en modifiant le ConfigMap. Par exemple, pour changer le sous-réseau IP par défaut, éditez le ConfigMap :
+
 ```shell
 kubectl edit configmap -n kube-system calico-config
 ```
@@ -110,12 +114,14 @@ spec:
             role: web
 ```
 Enregistrez le fichier YAML ci-dessus (par exemple, `allow-http.yaml`) et appliquez la politique réseau :
+
 ```shell
 kubectl apply -f allow-http.yaml
 ```
 
 ## Étape 5 : Vérification des politiques réseau
 Vérifiez que la politique réseau est correctement configurée :
+
 ```shell
 kubectl get networkpolicies
 ```

@@ -43,11 +43,15 @@ Vous pouvez personnaliser la configuration de Calico en modifiant le ConfigMap. 
 
 Vérifiez que les ressources Calico sont correctement configurées :
 
-`kubectl get felixconfigurations.crd.projectcalico.org`
-
-`kubectl get bgpconfigurations.crd.projectcalico.org`
-
-`kubectl get ippools.crd.projectcalico.org`
+```shell
+kubectl get felixconfigurations.crd.projectcalico.org
+```
+```shell
+kubectl get bgpconfigurations.crd.projectcalico.org
+```
+```shell
+kubectl get ippools.crd.projectcalico.org
+```
 
 ## Étape 3 : Test de Calico
 

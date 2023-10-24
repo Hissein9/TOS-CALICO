@@ -1,5 +1,7 @@
 # TOS-CALICO
 
+![Simplified Networking, Security and Observability for Rancher Kubernetes  Engine with Calico | SUSE Communities](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-J2g78-RncNtklzNcfSHSvhQM_hbghq42Hg&usqp=CAU)
+
 # Introduction à la Mise en Place de Calico sur Kubernetes
 Calico, un outil open-source, est essentiel pour la gestion de réseaux robustes et sécurisés dans les clusters Kubernetes. Ce tutoriel détaillé vous guide dans l'installation, la configuration, et les tests de Calico, vous permettant de renforcer la connectivité et la sécurité de vos applications. Peu importe votre niveau d'expérience, ce guide vous fournira les clés pour maximiser les avantages de Calico au sein de votre infrastructure Kubernetes. Plongeons dès maintenant dans ce processus essentiel pour votre environnement conteneurisé.
 
@@ -41,9 +43,9 @@ Vous pouvez personnaliser la configuration de Calico en modifiant le ConfigMap. 
 
 Vérifiez que les ressources Calico sont correctement configurées :
 
-`kubectl get felixconfigurations.crd.projectcalico.org 
-kubectl get bgpconfigurations.crd.projectcalico.org 
-kubectl get ippools.crd.projectcalico.org`
+`kubectl get felixconfigurations.crd.projectcalico.org `
+`kubectl get bgpconfigurations.crd.projectcalico.org `
+`kubectl get ippools.crd.projectcalico.org`
 
 ## Étape 3 : Test de Calico
 
@@ -105,4 +107,3 @@ Vérifiez que la politique réseau est correctement configurée :
 
 C'est tout ! Vous avez configuré et testé Calico avec Kubernetes.
 
-![Simplified Networking, Security and Observability for Rancher Kubernetes  Engine with Calico | SUSE Communities](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-J2g78-RncNtklzNcfSHSvhQM_hbghq42Hg&usqp=CAU)

@@ -27,19 +27,23 @@ En respectant ces prérequis, vous serez prêt à déployer et à configurer Cal
 wget https://docs.projectcalico.org/manifests/calico.yaml
 ```
 ### 1.2. Appliquer le manifeste
-
-`kubectl apply -f calico.yaml`
+```shell
+kubectl apply -f calico.yaml
+```
 
 Attendez que tous les pods Calico soient en cours d'exécution :
 
-`kubectl get pods -n kube-system`
+```shell
+kubectl get pods -n kube-system
+```
 
 ## Étape 2 : Configuration de Calico
 
 ### 2.1. Personnalisation de la configuration (optionnel)
 Vous pouvez personnaliser la configuration de Calico en modifiant le ConfigMap. Par exemple, pour changer le sous-réseau IP par défaut, éditez le ConfigMap :
-
-`kubectl edit configmap -n kube-system calico-config`
+```shell
+kubectl edit configmap -n kube-system calico-config
+```
 
 Vérifiez que les ressources Calico sont correctement configurées :
 
@@ -78,7 +82,9 @@ spec:
 ```
 Enregistrez le fichier YAML ci-dessus (par exemple, `nginx-deployment.yaml`) et déployez-le avec `kubectl` :
 
-`kubectl apply -f nginx-deployment.yaml`
+```shell
+kubectl apply -f nginx-deployment.yaml
+```shell
 
 Vérifiez que les pods Nginx sont en cours d'exécution :
 ```shell
@@ -104,12 +110,15 @@ spec:
             role: web
 ```
 Enregistrez le fichier YAML ci-dessus (par exemple, `allow-http.yaml`) et appliquez la politique réseau :
-`kubectl apply -f allow-http.yaml`
+```shell
+kubectl apply -f allow-http.yaml
+```
 
 ## Étape 5 : Vérification des politiques réseau
 Vérifiez que la politique réseau est correctement configurée :
-
-`kubectl get networkpolicies`
+```shell
+kubectl get networkpolicies
+```
 
 C'est tout ! Vous avez configuré et testé Calico avec Kubernetes.
 
